@@ -1,0 +1,13 @@
+# example profiles.yml file
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: postgres
+      schema: dbt_jaffle_shop # 会自动创建
+      threads: 4
