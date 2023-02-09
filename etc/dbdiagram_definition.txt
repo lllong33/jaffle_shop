@@ -18,6 +18,15 @@ Table customers {
   last_name varchar
 }
 
+Table addr {
+  id int PK
+  customer_id int
+  tel varchar
+  delivery_address varchar
+}
+
 Ref: orders.user_id > customers.id
 
 Ref: payments.order_id > orders.id
+
+Ref: addr.customer_id > customers.id
